@@ -1,137 +1,65 @@
 export default function Home() {
 return (
-<main style={{
-background:"#07070a",
-color:"#fff",
-minHeight:"100vh",
-fontFamily:"Inter, Arial",
-padding:"60px",
-lineHeight:"1.6"
-}}>
+<main className="min-h-screen bg-[#050508] text-white overflow-hidden">
+
+  {/* GRADIENT GLOW */}
+  <div className="absolute top-[-200px] left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-purple-600/20 blur-[160px] rounded-full"></div>
 
   {/* NAVBAR */}
-  <div style={{
-    display:"flex",
-    justifyContent:"space-between",
-    alignItems:"center",
-    marginBottom:"80px"
-  }}>
-    <h2 style={{letterSpacing:"4px"}}>SIGNALSTACK</h2>
+  <div className="relative flex justify-between items-center px-10 py-6 border-b border-white/10 backdrop-blur-xl">
+    <h2 className="tracking-[6px] font-semibold text-lg">SIGNALSTACK</h2>
 
-    <div>
-      <button style={{
-        background:"transparent",
-        color:"#aaa",
-        border:"none",
-        marginRight:"20px",
-        cursor:"pointer"
-      }}>Models</button>
+    <div className="flex gap-6 items-center">
+      <button className="text-white/60 hover:text-white transition">Models</button>
+      <button className="text-white/60 hover:text-white transition">Insights</button>
 
-      <button style={{
-        background:"transparent",
-        color:"#aaa",
-        border:"none",
-        marginRight:"20px",
-        cursor:"pointer"
-      }}>Insights</button>
-
-      <button style={{
-        background:"#fff",
-        color:"#000",
-        padding:"10px 18px",
-        borderRadius:"10px",
-        border:"none",
-        fontWeight:"bold",
-        cursor:"pointer"
-      }}>Get Access</button>
+      <button className="bg-white text-black px-5 py-2 rounded-xl font-semibold hover:scale-105 transition">
+        Get Access
+      </button>
     </div>
   </div>
 
   {/* HERO */}
-  <h1 style={{
-    fontSize:"72px",
-    maxWidth:"800px",
-    marginBottom:"20px"
-  }}>
-    Upgrade your thinking system.
-  </h1>
+  <div className="relative px-10 pt-40 pb-32 max-w-5xl">
+    <h1 className="text-7xl font-semibold leading-tight">
+      Upgrade your thinking system.
+    </h1>
 
-  <p style={{
-    color:"#999",
-    maxWidth:"600px",
-    marginBottom:"60px"
-  }}>
-    SignalStack is a premium library of mental models, decision tools,
-    and high-signal insights for ambitious people who want sharper judgment
-    and long-term leverage.
-  </p>
+    <p className="text-white/60 mt-6 text-lg max-w-2xl">
+      A premium library of mental models, insights, and decision tools
+      designed for ambitious builders who want sharper judgment,
+      leverage, and long-term advantage.
+    </p>
 
-  {/* FEATURE CARDS */}
-  <div style={{
-    display:"grid",
-    gridTemplateColumns:"repeat(auto-fit,minmax(260px,1fr))",
-    gap:"20px",
-    marginBottom:"100px"
-  }}>
+    <button className="mt-10 bg-white text-black px-8 py-4 rounded-2xl font-semibold hover:scale-105 transition">
+      Explore Models
+    </button>
+  </div>
 
-    <div style={{
-      background:"#111",
-      padding:"25px",
-      borderRadius:"18px"
-    }}>
-      <h3>Inversion</h3>
-      <p style={{color:"#aaa"}}>
+  {/* FEATURE GRID */}
+  <div className="relative grid md:grid-cols-3 gap-6 px-10 pb-40">
+
+    <div className="bg-white/5 backdrop-blur-xl p-8 rounded-3xl border border-white/10 hover:bg-white/10 transition hover:-translate-y-2">
+      <h3 className="text-2xl font-semibold">Inversion</h3>
+      <p className="text-white/60 mt-4">
         Ask how this could fail before asking how it could succeed.
       </p>
     </div>
 
-    <div style={{
-      background:"#111",
-      padding:"25px",
-      borderRadius:"18px"
-    }}>
-      <h3>Opportunity Cost</h3>
-      <p style={{color:"#aaa"}}>
-        Every decision eliminates other paths. Choose consciously.
+    <div className="bg-white/5 backdrop-blur-xl p-8 rounded-3xl border border-white/10 hover:bg-white/10 transition hover:-translate-y-2">
+      <h3 className="text-2xl font-semibold">Opportunity Cost</h3>
+      <p className="text-white/60 mt-4">
+        Every decision eliminates alternative futures.
       </p>
     </div>
 
-    <div style={{
-      background:"#111",
-      padding:"25px",
-      borderRadius:"18px"
-    }}>
-      <h3>Second-Order Thinking</h3>
-      <p style={{color:"#aaa"}}>
-        Do not stop at the first consequence. Trace the chain.
+    <div className="bg-white/5 backdrop-blur-xl p-8 rounded-3xl border border-white/10 hover:bg-white/10 transition hover:-translate-y-2">
+      <h3 className="text-2xl font-semibold">Second Order Thinking</h3>
+      <p className="text-white/60 mt-4">
+        Trace consequences beyond the first visible outcome.
       </p>
     </div>
 
-  </div>
-
-  {/* CTA */}
-  <div style={{
-    background:"#111",
-    padding:"40px",
-    borderRadius:"22px",
-    textAlign:"center"
-  }}>
-    <h2 style={{fontSize:"36px"}}>Think Like a Builder</h2>
-    <p style={{color:"#aaa", marginBottom:"25px"}}>
-      Access the full system of mental models and decision tools.
-    </p>
-
-    <button style={{
-      background:"#fff",
-      color:"#000",
-      padding:"14px 28px",
-      borderRadius:"14px",
-      border:"none",
-      fontWeight:"bold",
-      cursor:"pointer"
-    }}>
-      Get Lifetime Access
-    </button>
   </div>
 
 </main>
